@@ -1,3 +1,7 @@
+clusterName: ""
+defaultNodes:
+  nodeClass:
+    role: ""
 karpenter:
   replicas: 1
   settings:

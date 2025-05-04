@@ -1,3 +1,7 @@
+clusterName: "management"
+defaultNodes:
+  nodeClass:
+    role: "arn:aws:iam::286747865976:instance-profile/Karpenter-management-2025050307471372500000000"
 karpenter:
   settings:
     clusterName: "management"
