@@ -1,0 +1,14 @@
+karpenter:
+  settings:
+    clusterName: "manamgement"
+    interruptionQueue: "arn:aws:sqs:eu-west-1:286747865976:Karpenter-management"
+    aws:
+      clusterEndpoint: "https://EBB57733B749A195621FD8EDDC7616B9.yl4.eu-west-1.eks.amazonaws.com"
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: "arn:aws:iam::286747865976:role/KarpenterController-2025050307471352410000000a"
+  webhook:
+    serviceName: "karpenter-webhook-mgnt"
+  karpenter-crd:
+    webhook:
+      serviceName: "karpenter-webhook-mgnt"

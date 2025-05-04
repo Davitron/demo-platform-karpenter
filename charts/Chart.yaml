@@ -1,0 +1,13 @@
+apiVersion: v2
+name: karpenter
+description: A Helm chart for Karpenter
+type: application
+
+
+dependencies:
+  - name: karpenter
+    version: 1.4.0
+    repository: "oci://public.ecr.aws/karpenter"
+  - name: karpenter-crd
+    version: 1.4.0
+    repository: "oci://public.ecr.aws/karpenter"

@@ -1,0 +1,29 @@
+karpenter:
+  replicas: 1
+  settings:
+    clusterName: ""
+    interruptionQueue: ""
+    aws:
+      clusterEndpoint: ""
+    featureGates:
+      drift: True
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: ""
+  controller:
+    resources:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: 200m
+        memory: 512Mi
+  webhook:
+    enabled: true
+    serviceName: ""
+    port: 8443
+karpenter-crd:
+  webhook:
+    enabled: true
+    serviceName: ""
+    port: 8443
