@@ -1,0 +1,18 @@
+clusterName: "development"
+defaultNodes:
+  nodeClass:
+    role: "arn:aws:iam::286747865976:role/Karpenter-development-2025050523400634060000001b"
+karpenter:
+  settings:
+    clusterName: "development"
+    interruptionQueue: "Karpenter-development"
+    aws:
+      clusterEndpoint: "https://F25EF080545D53AAAC13F84A0009E22D.gr7.eu-west-1.eks.amazonaws.com"
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: "arn:aws:iam::286747865976:role/KarpenterController-2025050523400633480000001a"
+  webhook:
+    serviceName: "karpenter-webhook-dev"
+  karpenter-crd:
+    webhook:
+      serviceName: "karpenter-webhook-dev"

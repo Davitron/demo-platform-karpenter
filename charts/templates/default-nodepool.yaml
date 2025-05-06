@@ -41,7 +41,10 @@ spec:
             - linux
         - key: "karpenter.k8s.aws/instance-category"
           operator: In
-          values: [ "c", "m", "r" ]
+          values: [ "c", "m", "r", "t" ]
+        - key: "karpenter.k8s.aws/instance-generation"
+          operator: Gt
+          values: [ "1" ]
         - key: "karpenter.k8s.aws/instance-cpu"
           operator: Lt
           values: [ "33" ]
