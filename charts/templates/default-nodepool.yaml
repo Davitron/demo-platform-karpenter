@@ -48,4 +48,7 @@ spec:
         - key: "karpenter.k8s.aws/instance-cpu"
           operator: Lt
           values: [ "33" ]
+        - key: karpenter.k8s.aws/instance-size
+          operator: In
+          values: ["medium", "large"]
 
